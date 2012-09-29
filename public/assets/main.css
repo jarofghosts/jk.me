@@ -1,0 +1,77 @@
+::selection {
+	background: #d33682;
+	}
+::-moz-selection {
+	background: #d33682;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #fdf6e3;
+}
+h1 {
+	color: #002b36;
+	margin: 20px 0px 32px 30px;
+	font: 800 48px/48px "open sans";
+	text-transform: uppercase;
+}
+header {
+	text-align: center;
+	border-bottom: 2px solid #002b36;
+}
+header h1 {
+	font: 800 64px/64px "open sans";
+	margin: 20px 0px 32px 0px;
+}
+h1 span {
+	font: 400 60px/60px "gentium book basic";
+	font-style: italic;
+	text-transform: none;
+}
+
+p {
+	color: #002b36;
+	font: 400 16px/24px "gentium book basic";
+	padding: 10px 32px 10px 32px;
+	display: block;
+}
+
+p a {
+	color: #b58900;
+	text-decoration: none;
+	border-bottom: 1px solid #b58900;
+}
+
+p a:visited {
+	border-bottom: 1px solid #fdf6e3;
+}
+
+p a:hover {
+	background: 1px 1px 1px #eee8d5;
+}
+
+p a:active {
+	background: #d33682;
+	color: #222;
+}
+
+section {
+	clear: both;
+}
+
+#blog {
+	position: relative;
+	width: 50%;
+}
+#fun_stuff {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background: #073642;
+	border-left: 10px solid #002b36;
+}
