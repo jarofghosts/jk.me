@@ -5,7 +5,7 @@
 	background: #d33682;
 }
 
-html, body {
+* {
 	margin: 0;
 	padding: 0;
 	line-height: 1;
@@ -126,7 +126,7 @@ p a:active {
 #header_menu ol li a {
 	font-size: 40px;
 	text-decoration: none;
-	text-shadow: -2px 2px 0px #b58900;
+	text-shadow: -2px 2px 0px #002b36;
 	color: #eee8d5;
 }
 
@@ -139,10 +139,29 @@ p a:active {
 }
 
 footer {
-	width: 100%;
+	width: 50%;
 	position: fixed;
 	height: 125px;
 	bottom: 0;
+	right: 0;
+	text-align: center;
+}
+
+footer ol li {
+	list-style: none;
+	margin-left: 10%;
+	display: inline-block;
+}
+
+footer ol:first-child {
+	margin: 0px;
+}
+
+footer ol li a {
+	font-size: 40px;
+	text-decoration: none;
+	text-shadow: -2px 2px 0px #002b36;
+	color: #eee8d5;
 }
 
 .subpage {
@@ -165,7 +184,6 @@ footer {
 label {
 	display: inline-block;
 	font: 800 20px/20px "open sans";
-	text-transform: capitalize;
 	margin: 15px 0px 15px 0px;
 }
 
@@ -181,15 +199,38 @@ textarea {
 	font: 400 16px/24px "gentium book basic";
 	background: #fdf6e3;
 	width: 75%;
-	min-height: 350px;
 	height: 100%;
 	padding: 10px;
 }
 
-.subpage a {
-	color: #b58900;
+.form-button {
+	display: inline-block;
+	background-color: #eee8d5;
+	box-shadow: -3px 3px 0px 0px #002b36;
+	padding: 10px;
+	color: #002b36;
+	border: 0px;
+	margin-top: 20px;
 	text-decoration: none;
-	border-bottom: 1px solid #b58900;
+	font: 800 20px/20px "open sans";
+}
+
+.form-button:hover {
+	cursor: pointer;
+	cursor: hand; /* http://www.iestolemylife.com/ */
+	background-color: #fdf6e3;
+}
+
+.form-button:active {
+	margin-right: 2px;
+	margin-top: 22px;
+	box-shadow: -1px 1px 0px 0px #002b36;
+}
+
+.subpage a {
+	color: #002b36;
+	text-decoration: none;
+	border-bottom: 1px solid #002b36;
 }
 
 .subpage a:visited {

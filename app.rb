@@ -15,7 +15,9 @@ get '/' do
 end
 
 get '/blog/(:slug)' do
-
+	@entry = Entry.where( :slug => params[:slug] )
+	return erb :blog_page unless !defined? @entry
+	erb :fourohfour
 end
 
 post '/contact/send' do
@@ -27,3 +29,6 @@ end
 post '/blog/new' do
 	Entry.create ( :title => params[:title], :body => params[:body] )
 end
+
+get '/blog/new' do
+	erb :
