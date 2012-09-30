@@ -15,7 +15,7 @@ body {
 }
 h1 {
 	color: #002b36;
-	margin: 20px 0px 32px 30px;
+	margin: 20px 0px 32px 0px;
 	font: 800 48px/48px "open sans";
 	text-transform: uppercase;
 	text-align: center;
@@ -76,6 +76,7 @@ p a:active {
 }
 
 #header_menu {
+	z-index: 2;
 	display: none;
 	text-align: center;
 	position: fixed;
@@ -143,4 +144,30 @@ footer {
 	position: fixed;
 	height: 125px;
 	bottom: 0;
+}
+
+.subpage {
+	
+	width: 75%;
+	height: 80%;
+}
+
+
+.subpage a {
+	color: #b58900;
+	text-decoration: none;
+	border-bottom: 1px solid #b58900;
+}
+
+.subpage a:visited {
+	border-bottom: 1px solid #073642;
+}
+
+.subpage a:hover {
+	background: 1px 1px 1px #002b36;
+}
+
+.subpage a:active {
+	background: #d33682;
+	color: #222;
 }

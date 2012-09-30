@@ -67,11 +67,47 @@ and (max-width : 1200px) {
 	}
 
 }
-/* Large screens ----------- */
 @media only screen
-and (min-width : 1824px) {
-/* Styles */
+and (max-width: 900px) {
+	#header_menu ol {
+		margin-top: 20px;
+	}
+	#header_menu ol li a {
+		font-size: 25px;
+	}
+}
 
+@media only screen
+and (max-width: 800px) {
+	#header_menu ol {
+		display: none;
+	}
+	#header_menu ul {
+		margin-left: 0px;
+		padding-left: 0px;
+		margin-right: 0px;
+	}
+	#header_menu ul li {
+		display: inline-block;
+		float: none;
+		margin-left: 10px;
+	}
+	#header_menu ul:first-child {
+		margin-left: 0px;
+	}
+}
+
+@media only screen
+and (max-width: 500px) {
+	#header_menu ul li a {
+		font-size: 10px;
+	}
+	header h1 {
+		font-size: 48px;
+	}
+	h1 {
+		font-size: 32px;
+	}
 }
 
 /* iPhone 4 ----------- */
