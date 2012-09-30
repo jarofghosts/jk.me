@@ -109,8 +109,8 @@ p a:active {
 	margin-left: 25px;
 }
 
-#header_menu ul li:first {
-	margin-left: 0;
+#header_menu ul:first-child {
+	margin-left: 0px;
 }
 
 #header_menu ul li a {
@@ -140,18 +140,51 @@ p a:active {
 
 footer {
 	width: 100%;
-	box-shadow: 0px -2px 0px 0px #fdf6e3;
 	position: fixed;
 	height: 125px;
 	bottom: 0;
 }
 
 .subpage {
-	
-	width: 75%;
-	height: 80%;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #fdf6e3;
+	margin: auto auto;
 }
 
+.subpage h1 {
+	color: #fdf6e3;
+}
+
+#contact-form {
+	margin: auto auto;
+}
+
+label {
+	display: inline-block;
+	font: 800 20px/20px "open sans";
+	text-transform: capitalize;
+	margin: 15px 0px 15px 0px;
+}
+
+input[type=text] {
+	font: 400 16px/24px "gentium book basic";
+	background: #fdf6e3;
+	width: 75%;
+	padding: 10px;
+	border: 0px;
+}
+
+textarea {
+	font: 400 16px/24px "gentium book basic";
+	background: #fdf6e3;
+	width: 75%;
+	min-height: 350px;
+	height: 100%;
+	padding: 10px;
+}
 
 .subpage a {
 	color: #b58900;
@@ -170,4 +203,14 @@ footer {
 .subpage a:active {
 	background: #d33682;
 	color: #222;
+}
+#projects {
+	display: none;
+}
+
+#contact {
+	
+}
+#about {
+	display: none;
 }

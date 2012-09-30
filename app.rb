@@ -3,38 +3,27 @@ require 'sinatra/activerecord'
 require 'json'
 require './config/env'
 
-class Thing < ActiveRecord::Base
+class Entry < ActiveRecord::Base
+end
+
+class Contact < ActiveRecord::Base
 end
 
 get '/' do
-	@things = Thing.last(10)
+	@entry = Entry.last
 	erb :index
 end
 
-get '/:number/things' do
-	number = params[:number].to_i <= 50 ? params[:number].to_i : 50;
-	Thing.last(number).to_json
+get '/blog/(:slug)' do
+
 end
 
-get '/:number/old/things' do
-	number = params[:number].to_i <= 50 ? params[:number].to_i : 50;
-	Thing.first(number).to_json
+post '/contact/send' do
+	params[:name] ||= "Buddy"
+	Contact.create ( :name => params[:contact-name], :message => params[:contact-message] )
+	"Thanks for the message, #{params[:name]}"
 end
 
-get '/:number/new/things' do
-	number = params[:number].to_i <= 50 ? params[:number].to_i : 50;
-	Thing.last(number).to_json
-end
-
-post '/:thing/is/:definition' do
-  Thing.create( :thing => params[:thing], :definition => params[:definition]) unless Thing.exists?(:thing => params[:thing])
-  Thing.where(:thing => params[:thing]).to_json
-end
-
-get '/:thing/is' do
-  Thing.where(:thing => params[:thing]).to_json
-end
-
-delete '*' do
-  "nope.avi"
+post '/blog/new' do
+	Entry.create ( :title => params[:title], :body => params[:body] )
 end

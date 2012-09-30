@@ -92,9 +92,6 @@ and (max-width: 800px) {
 		float: none;
 		margin-left: 10px;
 	}
-	#header_menu ul:first-child {
-		margin-left: 0px;
-	}
 }
 
 @media only screen
