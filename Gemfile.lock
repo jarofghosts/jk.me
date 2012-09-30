@@ -29,6 +29,7 @@ GEM
       activerecord (~> 3.0)
       sinatra (~> 1.0)
     sqlite3 (1.3.6)
+    stringex (1.4.0)
     tilt (1.3.3)
     tzinfo (0.3.33)
 
@@ -42,3 +43,4 @@ DEPENDENCIES
   sinatra
   sinatra-activerecord
   sqlite3
+  stringex

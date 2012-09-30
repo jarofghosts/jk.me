@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
+require 'stringex'
 require 'json'
 require './config/env'
 
@@ -24,7 +25,7 @@ end
 post '/contact/send' do
 	return "C'mon, what do you want to say?" if params[:contact_message].empty?
 	params[:contact_name] ||= "Buddy"
-	params[:contact_info] ||= "---"
+	params[:contact_info] ||= "-didn't say-"
 	Message.create( :name => params[:contact_name],
 					 :message => params[:contact_message],
 					 :respond => params[:contact_info] )
@@ -33,5 +34,5 @@ post '/contact/send' do
 end
 
 post '/blog/new' do
-	Entry.create( :title => params[:title], :body => params[:body] )
+	Entry.create( :title => params[:title], :body => params[:body], :slug => parms[:title].to_url )
 end

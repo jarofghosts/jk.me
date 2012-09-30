@@ -265,8 +265,14 @@ textarea {
 	background: #d33682;
 	color: #222;
 }
+.subpage img {
+	max-width: 50%;
+	max-height: 50%;
+	border-radius: 10px;
+	box-shadow: 0 8px 9px -6px #222;
+}
 #projects {
-	
+	display: none;
 }
 .projects {
 	text-align: left;
@@ -275,12 +281,25 @@ textarea {
 }
 
 .projects p {
-	clear: both;
 	background-color: #fdf6e3;
 	position: relative;
 	display: block;
 	width: 75%;
 	margin: 15px;
+}
+
+.subpage p {
+	box-shadow: -3px 3px 0px 0px #002b36;
+}
+
+#about p {
+	padding: 20px;
+	background-color: #fdf6e3;
+	position: relative;
+	display: block;
+	width: 70%;
+	margin: auto;
+	margin-top: 48px;
 }
 
 .projects ul li {
@@ -300,5 +319,5 @@ textarea {
 	display: none;
 }
 #about {
-	display: none;
+	
 }
