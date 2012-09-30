@@ -109,7 +109,7 @@ p a:active {
 	margin-left: 25px;
 }
 
-#header_menu ul:first-child {
+#header_menu ul li:first-child {
 	margin-left: 0px;
 }
 
@@ -137,11 +137,19 @@ p a:active {
 #header_menu ol li a:hover {
 	color: #fdf6e3;
 }
+#jMeow {
+	color: #859900;
+	opacity: 0;
+	font: 400 48px/48px "gentium book basic";
+	margin-top: 20px;
+	font-style: italic;
+	text-transform: none;
+}
 
 footer {
 	width: 50%;
 	position: fixed;
-	height: 125px;
+	height: 60px;
 	bottom: 0;
 	right: 0;
 	text-align: center;
@@ -153,7 +161,7 @@ footer ol li {
 	display: inline-block;
 }
 
-footer ol:first-child {
+footer ol li:first-child {
 	margin: 0px;
 }
 
@@ -165,12 +173,13 @@ footer ol li a {
 }
 
 .subpage {
+	clear: both;
 	text-align: center;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	color: #fdf6e3;
-	margin: auto auto;
+	padding: 25px;
 }
 
 .subpage h1 {
@@ -193,6 +202,16 @@ input[type=text] {
 	width: 75%;
 	padding: 10px;
 	border: 0px;
+	box-shadow: -3px 3px 0px 0px #002b36;
+}
+
+input[type=email] {
+	font: 400 16px/24px "gentium book basic";
+	background: #fdf6e3;
+	width: 75%;
+	padding: 10px;
+	border: 0px;
+	box-shadow: -3px 3px 0px 0px #002b36;
 }
 
 textarea {
@@ -201,6 +220,7 @@ textarea {
 	width: 75%;
 	height: 100%;
 	padding: 10px;
+	box-shadow: -3px 3px 0px 0px #002b36;
 }
 
 .form-button {
@@ -246,11 +266,38 @@ textarea {
 	color: #222;
 }
 #projects {
-	display: none;
+	
+}
+.projects {
+	text-align: left;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.projects p {
+	clear: both;
+	background-color: #fdf6e3;
+	position: relative;
+	display: block;
+	width: 75%;
+	margin: 15px;
+}
+
+.projects ul li {
+	font-size: 24px;
+	list-style: none;
+	width: 85%;
+	border-bottom: 1px dashed #dc322f;
+	display: block;
+	padding: 5px;
+}
+
+.projects ul li a {
+	color: #fdf6e3;
 }
 
 #contact {
-	
+	display: none;
 }
 #about {
 	display: none;

@@ -4,9 +4,10 @@ require 'json'
 require './config/env'
 
 class Entry < ActiveRecord::Base
+	set_table_name "entries"
 end
 
-class Contact < ActiveRecord::Base
+class Message < ActiveRecord::Base
 end
 
 get '/' do
@@ -21,14 +22,16 @@ get '/blog/(:slug)' do
 end
 
 post '/contact/send' do
-	params[:name] ||= "Buddy"
-	Contact.create ( :name => params[:contact-name], :message => params[:contact-message] )
-	"Thanks for the message, #{params[:name]}"
+	return "C'mon, what do you want to say?" if params[:contact_message].empty?
+	params[:contact_name] ||= "Buddy"
+	params[:contact_info] ||= "---"
+	Message.create( :name => params[:contact_name],
+					 :message => params[:contact_message],
+					 :respond => params[:contact_info] )
+
+	"Thanks for the message, #{params[:contact_name]}!"
 end
 
 post '/blog/new' do
-	Entry.create ( :title => params[:title], :body => params[:body] )
+	Entry.create( :title => params[:title], :body => params[:body] )
 end
-
-get '/blog/new' do
-	erb :
