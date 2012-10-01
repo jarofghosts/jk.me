@@ -2,10 +2,11 @@ require 'sinatra'
 require 'sinatra/activerecord'
 require 'stringex'
 require 'json'
+require 'redcarpet'
 require './config/env'
 
 class Entry < ActiveRecord::Base
-	set_table_name "entries"
+	self.table_name = "entries"
 end
 
 class Message < ActiveRecord::Base
@@ -16,8 +17,8 @@ get '/' do
 	erb :index
 end
 
-get '/blog/(:slug)' do
-	@entry = Entry.where( :slug => params[:slug] )
+get '/b/:slug' do
+	@entry = Entry.where( :slug => params[:slug] ).first
 	return erb :blog_page unless !defined? @entry
 	erb :fourohfour
 end
@@ -34,5 +35,9 @@ post '/contact/send' do
 end
 
 post '/blog/new' do
-	Entry.create( :title => params[:title], :body => params[:body], :slug => parms[:title].to_url )
+	Entry.create( :title => params[:title], :body => params[:body], :slug => params[:title].to_url )
+end
+
+get '/blog/new' do
+	erb :blog_input
 end

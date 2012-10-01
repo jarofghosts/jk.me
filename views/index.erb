@@ -24,8 +24,8 @@
 			<ul>
 				<li><a href="#blog">Blog</a></li>
 				<li><a href="#projects">Projects</a></li>
-				<li><a href="#contact">Contact Me</a></li>
 				<li><a href="#about">About Me</a></li>
+				<li><a href="#contact">Contact Me</a></li>
 			</ul>
 			<ol>
 				<li><a href="http://www.linkedin.com/in/jarofghosts"><i class="icon-linkedin"></i></a></li>
@@ -39,35 +39,43 @@
 				<h1>Jesse Keane . Me</h1>
 			</header>
 			<div class="words">
-				<h1>What's Going On</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus scelerisque dui, nec mattis metus vehicula ut. In eros mauris, feugiat ac dapibus in, accumsan in urna. Duis volutpat, <a href="#">lectus eu fermentum egestas</a>, diam urna condimentum nisl, eget iaculis elit dolor ut risus. Aliquam nec risus eu nulla molestie adipiscing. In hac habitasse platea dictumst. Donec ac quam massa. Phasellus euismod eros ut libero euismod vel iaculis sapien rhoncus. Vivamus quis urna id massa accumsan porta nec at purus. Nulla vulputate, urna at congue volutpat, quam ante tincidunt libero, sit amet dapibus elit risus non risus. Integer ut lorem ac velit aliquet tempor. Fusce eget sapien non massa euismod porta. Morbi sed mi arcu, eu pellentesque dui. In vitae sapien at turpis rutrum laoreet.</p>
-
-	<p>Aliquam condimentum, odio nec condimentum molestie, lorem dolor mattis sem, at fringilla tortor orci sed nunc. Donec ipsum erat, porta sed tempor eget, blandit vel justo. Suspendisse suscipit aliquet est, nec vehicula justo pretium quis. Aliquam eu mauris mi, malesuada fringilla odio. <a href="http://www.britneyspears.com">Aenean vel mollis orci</a>. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam ultrices luctus pretium. Nam luctus ante nec lorem gravida congue. Mauris eget consectetur augue. Aliquam quam felis, ultrices at pharetra in, euismod sit amet risus. Donec vestibulum lorem ut <a href="#">justo</a> malesuada porta. Nulla eget felis sit amet metus convallis tincidunt sed vel sapien. Ut dapibus ultrices leo, in sagittis nunc tincidunt at.</p>
-
-	<p>Integer orci magna, convallis non bibendum ac, placerat id urna. Aliquam pretium tempor libero ut adipiscing. Praesent erat lacus, vestibulum sed convallis vitae, accumsan vitae ante. Pellentesque gravida varius est quis condimentum. Aliquam sit amet condimentum nisl. Aliquam ullamcorper feugiat orci <a href="http://google.com">tempor</a> pellentesque. Quisque urna neque, molestie at convallis ut, tempor in lectus. Ut ut diam sit amet nunc convallis porttitor. Etiam vel egestas nulla. Donec volutpat sagittis tincidunt. Suspendisse rhoncus, leo tristique faucibus imperdiet, sapien libero vulputate felis, a fringilla lectus augue in sem. Aliquam a enim risus.</p>
-
-	<p>Vivamus at arcu id massa faucibus blandit. Vivamus enim massa, scelerisque non scelerisque a, bibendum quis sapien. Praesent et dui nibh, non congue nulla. Integer in lorem tortor, id molestie dui. Nulla auctor tincidunt nunc dictum porta. Donec eget arcu ut metus volutpat mollis et quis eros. Suspendisse quis neque orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris mattis <a href="#">semper nulla id pulvinar</a>. Proin varius libero pulvinar neque dapibus luctus. Curabitur aliquet tincidunt lacus a fermentum. Suspendisse et nunc turpis, mattis sodales elit. Vestibulum vestibulum quam et felis tempor non lobortis nulla dignissim. Sed arcu leo, blandit at sollicitudin eu, feugiat eu erat.</p>
-
-	<p>Nunc purus tortor, lobortis a lobortis vel, dapibus nec nisi. Ut porta tempor velit non interdum. Ut vulputate tempor sagittis. Nunc sed orci non eros convallis sagittis. Curabitur commodo, quam ut blandit vestibulum, magna tortor cursus diam, quis sollicitudin leo tortor a leo. Ut sollicitudin iaculis quam, at aliquet diam viverra at. Ut neque metus, tristique sed viverra non, condimentum a tellus.</p>
+				<a href="/b/<%= @entry.slug %>"><h1><%= @entry.title %></h1></a>
+				<%= markdown(@entry.body) %>
 			</section>
 		</section>
 		<section id="fun_stuff">
-			<header></header>
+			<header>
+				<div id="left-button">
+					<a href="#previous" id="previous-button" class="navigation-button">Contact Me <i class="icon-comments"></i></a>
+				</div>
+				<div id="right-button">
+					<a href="#next" id="next-button" class="navigation-button">About Me <i class="icon-info-sign"></i></a>
+				</div>
+				<div style="clear:both"></div>
+			</header>
 
-			<div id="projects" class="subpage">
+			<div id="projects" class="subpage current-page">
 				<h1>Projects <i class="icon-cogs"></i></h1>
 				<div class="projects">
 					<ul>
 						<li><a href="https://github.com/jarofghosts/sailor">granary.php</a></li>
-							<p>Distributed forums with centralized tendencies. Also has smilies and other goodies. Written on top of the <a href="http://laravel.com/">Laravel PHP framework</a>.</p>
+							<p>Distributed forums with centralized tendencies. Written on top of the <a href="http://laravel.com/">Laravel PHP framework</a>.</p>
 						<li><a href="https://github.com/jarofghosts/bogman">bogman.rb</a></li>
-						<p>A public API for an immutable key-value store. Also an ongoing saga about magic dolphins. Uses <a href="http://www.sinatrarb.com/">Sinatra for Ruby</a> and Markdown.</p>
+						<p>A public API for an immutable key-value store. Also an ongoing saga about magic dolphins.</p>
 						<li><a href="https://github.com/jarofghosts/jk.me">jk.me</a></li>
-						<p>Personal site and blog in HTML5 and CSS3. Backend messaging and blog system produced with <a href="http://www.sinatrarb.com/">Sinatra</a>.</p>
+						<p>Personal site and blog in HTML5 and CSS3 with <a href="http://www.sinatrarb.com/">Sinatra</a> backend.</p>
+						<li><a href="https://github.com/jarofghosts/burner">burner.php</a></li>
+						<p>Self-destructive messages. Perfect for secret agents or coupon codes.</p>
 						<li>mops.rb</li>
 						<p>Putting willing strangers in touch on the Internet one <code>.rand()</code> at a time. <a href="http://www.sinatrarb.com/">Sinatra</a></p>
 					</ul>
 				</div>
+			</div>
+
+			<div id="about" class="subpage">
+				<h1>About Me <i class="icon-info-sign"></i></h1>
+				<img src="/img/me.jpg" alt="This is me."/>
+				<p>Jesse is a guy living in Portland, Oregon&mdash; though he was born in Illinois. Yet the mystery doesn't stop there. He also writes a lot of web apps, including some currently in development for his new job at <a href="http://www.solomonexamprep.com">Solomon Exam Prep</a>. Jesse also enjoys cats, coffee, and listening to music that most everyone else on Earth hates. You should really hit him up so that he doesn't end up sitting alone at his computer watching reruns of NBC's The Voice.</p>
 			</div>
 
 			<div id="contact" class="subpage">
@@ -82,12 +90,6 @@
 				<button type="submit" class="form-button">Send It</button><br/>
 					<div id="jMeow"></div>
 				</form>
-			</div>
-
-			<div id="about" class="subpage">
-				<h1>About Me <i class="icon-info-sign"></i></h1>
-				<img src="/img/me.jpg" alt="This is me."/>
-				<p>Jesse is a guy living in Portland, Oregon&mdash; though he was born in Illinois. Yet the mystery doesn't stop there. He also writes a lot of web apps, including some currently in development for his new job at <a href="http://www.solomonexamprep.com">Solomon Exam Prep</a>. Jesse also enjoys cats, coffee, and listening to music that most everyone else on Earth hates. You should really hit him up so that he doesn't end up sitting alone at his computer watching reruns of NBC's The Voice.</p>
 			</div>
 
 			<footer>
