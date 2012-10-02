@@ -5,15 +5,14 @@
 	background: #d33682;
 }
 
-
 * {
 	margin: 0;
 	padding: 0;
 }
 
 body {
-	background: #fdf6e3;
-	font: 400 32px/32px "gentium book basic";
+	background: #073642;
+	font: 400 18px/18px "gentium book basic";
 }
 
 a {
@@ -35,16 +34,21 @@ a:active {
 	color: #222;
 }
 
+p {
+	padding: 5px;
+	padding-top: 10px;
+}
+
 section {
 	border-left: 10px solid #002b36;
 	border-right: 10px solid #002b36;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+	background: #fdf6e3;
+	color: #073642;
 	margin-left: auto;
 	margin-right: auto;
-	background: #073642;
+	margin-top: -1px;
+	padding: 10px;
+	padding-top: 25px;
 	height: 100%;
 	width: 30%;
 }
@@ -61,6 +65,7 @@ header {
 	z-index: 2;
 	position: relative;
 	width: 100%;
+	text-shadow: -3px 3px 0px #002b36;
 	color: #fdf6e3;
 	text-align: center;
 	font: 800 64px/64px "open sans";

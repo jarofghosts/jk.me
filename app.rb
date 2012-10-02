@@ -18,7 +18,7 @@ get '/' do
 end
 
 get '/b/' do
-	@entries = Entry.last(25)
+	@entries = Entry.order("created_at desc").last(25)
 	erb :blog_list
 end
 
