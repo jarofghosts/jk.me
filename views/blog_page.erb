@@ -4,17 +4,35 @@
 		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 		<title><%= @entry.title %></title>
 		<link href="/css/blogpage.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="/css/font-awesome.css" type="text/css">
 	</head>
 	<body>
 		<header><%= @entry.title %></header>
-		<section><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at magna ligula, quis laoreet est. Phasellus massa eros, dapibus ac laoreet id, porttitor a diam. Curabitur vitae mauris eros, sagittis mollis augue. Pellentesque tincidunt volutpat felis, id malesuada enim tincidunt id. Aenean lectus elit, egestas sit amet feugiat cursus, faucibus sed tortor. Mauris interdum, augue ut iaculis ornare, eros nisl dictum dolor, quis pulvinar erat dui id lorem. Nulla porttitor iaculis lobortis. Cras feugiat, nibh ac malesuada consequat, enim purus aliquam libero, vel consectetur leo justo id ipsum. Vivamus at augue at libero euismod sodales ac in elit. Etiam ipsum ante, fermentum at laoreet vitae, tristique varius justo. Proin ultricies pulvinar ante nec posuere. Duis gravida lobortis augue, quis posuere nulla volutpat a. Ut id metus quis lacus consectetur luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-
-<p>Nunc sit amet tortor ante. Mauris aliquam leo non lorem pellentesque tincidunt. Cras ullamcorper ultricies cursus. Donec id enim risus, sit amet tincidunt metus. Quisque ultrices purus eget massa condimentum sed porta arcu sodales. In in orci consequat metus accumsan imperdiet. Sed nec ligula a turpis sollicitudin sollicitudin nec vitae metus.</p>
-
-<p>Aenean condimentum nisi ut purus aliquet placerat. Aenean ornare felis non nisl euismod laoreet. Fusce elit leo, eleifend a rutrum id, tristique quis libero. Nulla urna sapien, laoreet eu dignissim id, dapibus sit amet eros. Nulla facilisi. Aliquam erat volutpat. Aliquam at tellus metus, sed pharetra tortor. Ut condimentum, lacus eget vestibulum egestas, tellus turpis accumsan nulla, eu aliquet risus odio sed tortor. Donec euismod risus id nisi cursus ac dignissim massa gravida. Suspendisse vestibulum laoreet leo ac tempus.</p>
-
-<p>Aliquam tempus condimentum vulputate. Etiam et varius arcu. Etiam mattis tristique est, at dignissim tellus vestibulum eget. In hac habitasse platea dictumst. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Ut a sodales odio. Quisque ullamcorper gravida nunc in malesuada. Praesent vestibulum, orci sollicitudin vulputate interdum, est justo vehicula lorem, eu tempor purus quam sed odio. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur metus a ligula hendrerit tincidunt.</p>
-
-<p>Vestibulum ipsum erat, pulvinar nec adipiscing sit amet, placerat eget urna. Nam vehicula varius lorem eu molestie. Pellentesque nec urna sed arcu placerat iaculis ut quis purus. Aenean nisl purus, cursus vel posuere at, vestibulum a risus. Etiam adipiscing diam non lorem rhoncus molestie. Nulla viverra, lacus ac interdum imperdiet, arcu lacus cursus eros, id ultrices nulla dui vitae sem. In lectus mauris, iaculis nec rhoncus in, interdum sit amet mi. Nullam pulvinar placerat pulvinar. Duis ornare mi sit amet felis semper in mattis lacus aliquet. In lacus lacus, rhoncus nec auctor nec, tristique et ligula. Aliquam id nisi eget ligula ornare eleifend eget et nisl. Nulla lectus felis, ullamcorper tempus ullamcorper nec, porta sit amet sem.)</p></section>
+		<section role="navigation">
+			<ul>
+				<li><a href="/"><i class="icon-home"></i> Back Home</a></li>
+				<li><a href="/b/"><i class="icon-pencil"></i> Blog List</a></li>
+		</section>
+		<article>
+			<% if @previous then %>
+			<div id="previous-arrow" class="directions">
+				<a href="/b/<%= @previous.slug %>"><i class="icon-circle-arrow-left"></i></a>
+			</div>
+			<% end
+				if @next then %>
+			<div id="next-arrow" class="directions">
+				<a href="/b/<%= @next.slug %>"><i class="icon-circle-arrow-right"></i></a>
+			</div>
+			<% end %>
+			<%= markdown( @entry.body ) %>
+		</article>
+					<footer>
+				<ol>
+					<li><a href="https://github.com/jarofghosts"><i class="icon-github"></i></a></li>
+					<li><a href="https://twitter.com/jarofghosts"><i class="icon-twitter"></i></a></li>
+					<li><a href="https://plus.google.com/102866448651141599911/posts"><i class="icon-google-plus"></i></a></li>
+					<li><a href="http://www.linkedin.com/in/jarofghosts"><i class="icon-linkedin"></i></a></li>
+				</ol>
+			</footer>
 	</body>
 </html>

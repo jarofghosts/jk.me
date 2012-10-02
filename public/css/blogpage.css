@@ -10,7 +10,23 @@
 	padding: 0;
 }
 
+section {
+	position: fixed;
+	top: -50px;
+	left: -50px;
+}
+
+section ul li {
+	list-style: none;
+}
+
+section ul li a {
+	border-bottom: 0px;
+	font-size: 32px;
+}
+
 body {
+	line-height: 1;
 	background: #073642;
 	font: 400 18px/18px "gentium book basic";
 }
@@ -22,7 +38,7 @@ a {
 }
 
 a:visited {
-	border-bottom: 1px solid #073642;
+	border-bottom: 1px solid #fdf6e3;
 }
 
 a:hover {
@@ -39,18 +55,72 @@ p {
 	padding-top: 10px;
 }
 
-section {
+footer {
+	position: fixed;
+	bottom: 50;
+	right: 50;
+	color: #fdf6e3;
+}
+
+footer ol {
+	list-style: none;
+}
+
+footer ol li {
+	display: inline-block;
+	padding: 10px;
+}
+
+footer ol li a {
+	border-bottom: none;
+	font-size: 40px;
+	text-shadow: -3px 3px 0px #002b36;
+	color: #fdf6e3;
+}
+
+article {
 	border-left: 10px solid #002b36;
 	border-right: 10px solid #002b36;
+	border-bottom: 10px solid #002b36;
 	background: #fdf6e3;
+	position: relative;
 	color: #073642;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: -1px;
 	padding: 10px;
 	padding-top: 25px;
-	height: 100%;
-	width: 30%;
+	min-height: 80%;
+	width: 40%;
+	padding-bottom: 50px;
+}
+
+#previous-arrow {
+	left: -55px;
+}
+
+.directions {
+	text-shadow: -5px 5px 0px #002b36;
+	top: 100px;
+	color: #b58900;
+	font-size: 80px;
+	position: absolute;
+	width: 250px;
+}
+
+.directions a {
+	text-decoration: none;
+	border-bottom: none;
+}
+
+.directions a:active {
+	color: #b58900;
+	background: none;
+	text-shadow: none;
+}
+
+#next-arrow {
+	right: -250px;
 }
 
 ul {

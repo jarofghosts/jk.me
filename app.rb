@@ -24,6 +24,8 @@ end
 
 get '/b/:slug' do
 	@entry = Entry.where( :slug => params[:slug] ).first
+	@previous = Entry.where( :id => @entry.id - 1 ).first
+	@next = Entry.where( :id => @entry.id + 1 ).first
 	return erb :blog_page unless !defined? @entry
 	erb :fourohfour
 end
