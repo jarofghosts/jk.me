@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Jesse wrote some stuff...</title>
+		<link rel="stylesheet" href="/css/bloglist.css" style="text/css">
+	</head>
+	<body>
+		<header></header>
+		<section>
+			<ul>
+			<% @entries.each do |entry| %>
+				<li><a href="/b/<%= entry.slug %>"><%= entry.title %></a></li>
+			<% end %>
+			</ul>
+		</section>
+	</body>
+</html>

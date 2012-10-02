@@ -17,6 +17,11 @@ get '/' do
 	erb :index
 end
 
+get '/b/' do
+	@entries = Entry.last(25)
+	erb :blog_list
+end
+
 get '/b/:slug' do
 	@entry = Entry.where( :slug => params[:slug] ).first
 	return erb :blog_page unless !defined? @entry
