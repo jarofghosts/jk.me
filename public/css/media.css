@@ -59,7 +59,7 @@ and (max-height : 800px) {
 		display: none;
 	}
 	.subpage {
-		display: block;
+		display: block !important;
 		clear: both;
 		margin-top: 0px;
 	}
@@ -73,7 +73,7 @@ and (max-height : 800px) {
 
 	#projects {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #073642;
 		border-bottom: 5px solid #002b36;
 		border-top: 5px solid #002b36;
@@ -94,13 +94,13 @@ and (max-height : 800px) {
 
 	#about {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #fdf6e3;
 	}
 
 	#contact {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #073642;
 		border-bottom: 5px solid #002b36;
 		border-top: 5px solid #002b36;
@@ -148,7 +148,7 @@ and (max-width : 1400px) {
 
 	#projects {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #073642;
 	}
 
@@ -167,13 +167,13 @@ and (max-width : 1400px) {
 
 	#about {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #fdf6e3;
 	}
 
 	#contact {
 		width: 100%;
-		display: block;
+		display: block !important;
 		background: #073642;
 	}
 
@@ -187,7 +187,7 @@ and (max-width : 1400px) {
 		width: 75%;
 	}
 	.subpage {
-		display: block;
+		display: block !important;
 		padding-top: 50px;
 		padding-bottom: 50px;
 	}
