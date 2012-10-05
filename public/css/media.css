@@ -59,6 +59,7 @@ and (max-height : 800px) {
 		display: none;
 	}
 	.subpage {
+		display: block;
 		clear: both;
 		margin-top: 0px;
 	}
@@ -71,6 +72,7 @@ and (max-height : 800px) {
 	}
 
 	#projects {
+		width: 100%;
 		display: block;
 		background: #073642;
 		border-bottom: 5px solid #002b36;
@@ -91,11 +93,13 @@ and (max-height : 800px) {
 	}
 
 	#about {
+		width: 100%;
 		display: block;
 		background: #fdf6e3;
 	}
 
 	#contact {
+		width: 100%;
 		display: block;
 		background: #073642;
 		border-bottom: 5px solid #002b36;
@@ -108,10 +112,12 @@ and (max-height : 800px) {
 		padding-bottom: 50px;
 		margin-top: 95px;
 	}
+	#blog p {
+		width: 75%;
+	}
 	.subpage {
 		padding-top: 50px;
 		padding-bottom: 50px;
-		opacity: 1;
 	}
 }
 
@@ -141,6 +147,7 @@ and (max-width : 1400px) {
 	}
 
 	#projects {
+		width: 100%;
 		display: block;
 		background: #073642;
 	}
@@ -159,11 +166,13 @@ and (max-width : 1400px) {
 	}
 
 	#about {
+		width: 100%;
 		display: block;
 		background: #fdf6e3;
 	}
 
 	#contact {
+		width: 100%;
 		display: block;
 		background: #073642;
 	}
@@ -174,9 +183,12 @@ and (max-width : 1400px) {
 		padding-bottom: 50px;
 		margin-top: 95px;
 	}
+	#blog p {
+		width: 75%;
+	}
 	.subpage {
+		display: block;
 		padding-top: 50px;
-		opacity: 1;
 		padding-bottom: 50px;
 	}
 

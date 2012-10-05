@@ -1,12 +1,47 @@
 <html>
 	<head>
 		<title>gimme that blog</title>
+		<style type="text/css">
+		body {
+			color: #d0d0df;
+			background: #222;
+			font-family: 'Merriweather', serif;
+			text-align: center;
+		}
+		textarea {
+			font-family: 'Merriweather', serif;
+			width: 50%;
+			border: 0px;
+			color: #222;
+			height: 80%;
+		}
+		input {
+			border: 0px;
+			font-family: 'Merriweather', serif;
+			width: 50%;
+			color: #222;
+		}
+		button {
+			height: 10%;
+			width: 20%;
+			background: red;
+			color: #222;
+			font: 64px 'Monofett', cursive;
+			border: 0px;
+		}
+
+		</style>
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<form method="post" action="/blog/new">
-			<input type="text" name="title" placeholder="title"/><br/>
-			<textarea name="body" placeholder="body"></textarea><br/>
-			<button type="submit">save</button>
+		<form method="post" action="<%= "/blog/new" if !defined? @entry
+									   "/blog/edit" if defined? @entry %>">
+			<input type="hidden" name="slug" value="<%= @entry.slug unless !defined? @entry %>"/>
+			<input type="password" name="password" placeholder="shhhhhhhhhhhhhhhhhhhhhhh"/><br/>
+			<input type="text" name="title" placeholder="title" value="<%= @entry.title unless !defined? @entry %>"/><br/>
+			<textarea name="body" placeholder="body"><%= @entry.body unless !defined? @entry %></textarea><br/>
+			<button type="submit">BLOG</button>
 		</form>
 	</body>
 </html>

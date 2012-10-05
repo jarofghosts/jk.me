@@ -50,8 +50,8 @@ function movePage( current_page, direction ) {
 
 	}
 
-	$("#" + current_page).removeClass('current-page').fadeOut(250);
-	$("#" + new_page).addClass('current-page').fadeIn(250);
+	$("#" + current_page).removeClass('current-page').hide();
+	$("#" + new_page).show().addClass('current-page');
 
 	switch (new_page) {
 		case 'about':

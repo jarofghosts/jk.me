@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'stringex'
-require 'json'
 require 'redcarpet'
 require './config/env'
 
@@ -10,6 +9,8 @@ class Entry < ActiveRecord::Base
 end
 
 class Message < ActiveRecord::Base
+end
+class Ghostjar < ActiveRecord::Base
 end
 
 get '/' do
@@ -42,9 +43,26 @@ post '/contact/send' do
 end
 
 post '/blog/new' do
-	Entry.create( :title => params[:title], :body => params[:body], :slug => params[:title].to_url )
+	Entry.create( :title => params[:title], :body => params[:body], :slug => params[:title].to_url ) unless params[:password] != Ghostjar.first.password
+	redirect '/b/'
 end
 
 get '/blog/new' do
 	erb :blog_input
+end
+
+get '/e/:slug' do
+	@entry = Entry.where( :slug => params[:slug] ).first
+	erb :blog_input
+end
+
+post '/blog/edit' do
+	entry = Entry.where( :slug => params[:slug] ).first
+
+	entry.title = params[:title]
+	entry.body = params[:body]
+	# oh, piss off.. who's gonna hack my blog?
+	entry.save unless params[:password] != Ghostjar.first.password
+
+	redirect "/b/#{params[:slug]}"
 end
