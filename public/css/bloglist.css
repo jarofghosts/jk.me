@@ -46,7 +46,7 @@ section {
 	margin-right: auto;
 	background: #073642;
 	height: 100%;
-	width: 30%;
+	width: 60%;
 }
 
 ul {
@@ -64,4 +64,21 @@ header {
 	color: #fdf6e3;
 	text-align: center;
 	font: 800 64px/64px "open sans";
+}
+
+@media only screen
+and (max-width : 900px) {
+	header {
+		font: 800 48px/48px "open sans";
+	}
+	section ul li a {
+		font-size: 20px;
+	}
+}
+
+@media only screen
+and (max-width : 650px) {
+	header {
+		font: 800 32px/32px "open sans";
+	}
 }
